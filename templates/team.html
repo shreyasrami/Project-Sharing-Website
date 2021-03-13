@@ -1,0 +1,157 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HackathonProject</title>
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/meet.css' %}">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/e41a6e67ca.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- ====================================CODE========================================================= -->
+
+
+
+
+    <!-- =============================================NAVBAR============================================================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-none ">
+  <a class="navbar-brand" href="#"><i class="fab fa-accusoft fa-3x"></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse collapsediv" id="navbarSupportedContent">
+  <ul class="navbar-nav ml-auto ">
+    <!-- <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li> -->
+    {% if user.is_authenticated %}
+    <li class="nav-item">
+      <a class="nav-link meet" href="{% url 'about' %}">ABOUT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link meet" href="{% url 'home' %}">HOME</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link meet" href="{% url 'team' %}">TEAM</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link meet" href="{% url 'profile' %}">PROFILE</a>
+    </li>
+
+    {% else %}
+
+    <li class="nav-item">
+      <a class="nav-link meet" href="{% url 'about' %}">ABOUT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link meet" href="{% url 'team' %}">TEAM</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'login' %}"><button class="btn btn-light btn-outline-primary">LogIn</button></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'signup' %}"><button class="btn btn-light btn-outline-success">SignUp</button></a>
+
+    </li>
+    {% endif %}
+
+  </div>
+  </nav>
+
+
+    <!-- ================================NAVBAREND========================================================= -->
+
+
+
+
+
+
+
+
+      <div class="main"  data-aos="fade-up">
+
+<b><p class="bigfont">Meet the Creators</p></b>
+    <!-- <h1>MEET THE CREATORS</h1> -->
+    <div class="row">
+
+<!-- =========================================VIDHISH======================================== -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+
+        <div class="card" style="width: 18rem;">
+<img class="card-img-top" src="{% static 'images\rocket.svg' %}" alt="Card image cap">
+<div class="card-body">
+  <h4 class="card-title">Vidhish Panchal</h4>
+  <h5 class="card-title">Frontend Web Developer</h5>
+  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <a href="#" class="btn btn-primary">Profile</a>
+</div>
+</div>
+
+      </div>
+
+      <!-- =========================================VIDHISH======================================== -->
+      <!-- =========================================SHREYAS======================================== -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+
+        <div class="card" style="width: 18rem;">
+<img class="card-img-top" src="{% static 'images\rocket.svg' %}" alt="Card image cap">
+<div class="card-body">
+<h4 class="card-title">Shreyas Rami</h4>
+<h5 class="card-title">Backend Web Developer(Django)</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<a href="#" class="btn btn-primary">Profile</a>
+</div>
+</div>
+
+      </div>
+
+        <!-- =========================================SHREYAS======================================== -->
+          <!-- =========================================SHUBHAM======================================== -->
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+
+        <div class="card" style="width: 18rem;">
+<img class="card-img-top" src="{% static 'images\rocket.svg' %}" alt="Card image cap">
+<div class="card-body">
+  <h4 class="card-title">Shubham Revadekar</h4>
+  <h5 class="card-title">Frontend Web Developer</h5>
+  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <a href="#" class="btn btn-primary">Profile</a>
+</div>
+</div>
+
+      </div>
+          <!-- =========================================SHUBHAM======================================== -->
+    </div>
+
+
+  </div>
+
+   <!-- ===================================CODE-END========================================================= -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        offset:300,
+        duration: 1000,
+    });
+  </script>
+    <script type="text/javascript" src="index.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,97 @@
+body{
+  /* background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+  margin: 0;
+   background-repeat: no-repeat;
+   background-attachment: fixed; */
+   text-align: center;
+   /* margin: 10%; */
+   background-color: #fed0f3;
+background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre-v2.png");
+}
+
+@media only screen and (max-width: 1100px) {
+  .image{
+    display: none;
+  }
+  .logincard{
+    margin: 70px auto;
+  }
+  .margin{
+    margin-top: 50px;
+  }
+}
+
+.image{
+
+  margin: 40px auto;
+}
+
+.logincard{
+
+  /* margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 40px; */
+  margin: -90px auto;
+  border-radius: 2%;
+  box-shadow: 5px 5px 25px -5px grey;
+  /* display: block;
+  justify-content: center;
+  align-items: center; */
+
+}
+.form-text{
+  text-align: left;
+}
+
+
+/* ======================NAVBAR======================= */
+@media only screen and (max-width: 1100px) {
+  .nav-item{
+    width: 50%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding-left: 130px;
+    text-align: center;
+  }
+
+  .imgdiv1{
+    position: relative;
+    top: 70px;
+  }
+  .imgdiv3{
+    position: relative;
+    bottom: -40px;
+  }
+
+}
+nav{
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+
+}
+.nav-item{
+  margin-left: 15%;
+  text-align: center;
+}
+.collapsediv{
+  padding-right: 10%;
+}
+.meet{
+  margin-top: 8px;
+  text-align: center;
+}
+.meet:hover{
+  background-color: #bfa3b8;
+  transition: 0.5s;
+  border-radius: 999px;
+  width: 150%;
+
+  text-align: center;
+
+}
+.fa-accusoft{
+  color: #ab0061;
+}
+.row{
+  margin-top: 100px;
+}

@@ -1,0 +1,121 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HackathonProject</title>
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/e41a6e67ca.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- ====================================CODE========================================================= -->
+
+
+
+
+    <!-- =============================================NAVBAR============================================================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-none ">
+  <a class="navbar-brand" href="#"><i class="fab fa-accusoft fa-3x"></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse collapsediv" id="navbarSupportedContent">
+  <ul class="navbar-nav ml-auto ">
+    <!-- <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li> -->
+
+    
+    <li class="nav-item">
+      <a class="nav-link meet" href="{% url 'about' %}">ABOUT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link meet" href="{% url 'team' %}">TEAM</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'login' %}"><button class="btn btn-light btn-outline-primary">LogIn</button></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'signup' %}"><button class="btn btn-light btn-outline-success">SignUp</button></a>
+
+      </li>
+      
+  </div>
+  </nav>
+
+
+    <!-- ================================NAVBAREND========================================================= -->
+
+
+
+
+
+
+  <div class="row" data-aos="fade-up">
+
+    <div class="col-lg-6 col-md-12 col-sm-12">
+        <img class="image" src="{% static 'images\illustration-woman-online-desktop.svg' %}" alt="img">
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <div class="card logincard" style="width: 18rem;">
+  <div class="card-body">
+    <h3 class="card-title">Login</h3>
+
+    <form action="{% url 'login' %}" method="POST">
+      {% csrf_token %}
+<div class="form-group">
+  <br>
+
+  <label for="Username" class="form-text">Username</label>
+  <input type="text" class="form-control" id="Username" name="username" aria-describedby="emailHelp" placeholder="Enter email">
+  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+</div>
+<div class="form-group">
+  <label for="exampleInputPassword" class="form-text">Password</label>
+  <input type="password" class="form-control" id="exampleInputPassword"  name="password" placeholder="Password">
+</div>
+<div class="form-check">
+
+
+</div>
+<button type="submit" class="btn btn-primary">Login</button>
+</form><br><br>
+<div class="alert {{message_class}}">{{message}}</div>
+
+
+  </div>
+</div>
+    </div>
+
+  </div>
+
+
+
+   <!-- ===================================CODE-END========================================================= -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        offset:300,
+        duration: 1000,
+    });
+  </script>
+    <script type="text/javascript" src="index.js"></script>
+
+  </body>
+</html>
