@@ -6,7 +6,9 @@ from .models import Post,Profile
 
 
 def home(request):
-    return render(request,'home.html')
+    pf = Profile.objects.get(user=request.user)
+    posts = Post.objects.exclude(author=pf)
+    return render(request,'home.html',{'posts':posts})
 
     
 def addpost(request):

@@ -5,7 +5,7 @@ from post.models import Profile
 # Create your views here.
 def login(request):
     if request.user.is_authenticated:
-        return redirect('instag/')
+        return render(request,'home.html')
     else:
         err = ''
         message = ''

@@ -66,7 +66,8 @@
 
 
     <!-- =======================================POST========================================================     -->
-
+{% if posts %}
+{% for post in posts %}
     <div class="posts">
 
       <div class="card" >
@@ -74,19 +75,22 @@
 
 <div class="img-upper-part">
 
-        <img src="{% static 'images\rocket.svg' %}" class="profile-pic-small" alt="profile-pic">
+        <img src="{{ post.author.dp.url }}" class="profile-pic-small" alt="profile-pic">
          <h5 class="img-upper-part-text">Vidhish Panchal</h5>
          <button type="button" name="button" class="btn btn-primary follow-btn">Follow</button>
 </div>
         </div>
-<img class="card-img-top" src="{% static 'images\rocket.svg' %}" alt="Card image cap">
+<img class="card-img-top" src="{{ post.img.url }}" alt="Card image cap">
 <div class="card-body">
 
   <p class="card-text"><i class="far fa-heart fa-2x"></i><i class="far fa-comment fa-2x"></i><br><h4 class="cardlikecomment">0 likes</h4><br><h6 class="cardlikecomment">Some quick example text to build on the card title and make up the bulk of the card's content.</h6></p>
 
 </div>
 </div>
-
+{% endfor %}
+{% else %}
+<h1>No posts to show</h1>
+{% endif %}
         <!-- =======================================POSTEND========================================================     -->
 
    <!-- ===================================CODE-END========================================================= -->
