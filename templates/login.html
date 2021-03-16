@@ -30,7 +30,7 @@
   </button>
 
   <div class="collapse navbar-collapse collapsediv" id="navbarSupportedContent">
-  <ul class="navbar-nav ml-auto ">
+  <ul class="navbar-nav ml-auto navitems">
     <!-- <li class="nav-item active">
       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
     </li> -->
@@ -43,10 +43,10 @@
       <a class="nav-link meet" href="{% url 'team' %}">TEAM</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'login' %}"><button class="btn btn-light btn-outline-primary">LogIn</button></a>
+      <a class="nav-link" href="{% url 'login' %}"><button class="btn btn-primary">LogIn</button></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'signup' %}"><button class="btn btn-light btn-outline-success">SignUp</button></a>
+      <a class="nav-link" href="{% url 'signup' %}"><button class="btn btn-success">SignUp</button></a>
 
       </li>
       
@@ -64,7 +64,7 @@
   <div class="row" data-aos="fade-up">
 
     <div class="col-lg-6 col-md-12 col-sm-12">
-        <img class="image" src="{% static 'images\illustration-woman-online-desktop.svg' %}" alt="img">
+        <img class="image" src="{% static 'images\support_solid.svg' %}" alt="img">
     </div>
     <div class="col-lg-6 col-md-12 col-sm-12">
       <div class="card logincard" style="width: 18rem;">
@@ -77,7 +77,7 @@
   <br>
 
   <label for="Username" class="form-text">Username</label>
-  <input type="text" class="form-control" id="Username" name="username" aria-describedby="emailHelp" placeholder="Enter email">
+  <input type="text" class="form-control" id="Username" name="username" aria-describedby="emailHelp" placeholder="Username">
   <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 </div>
 <div class="form-group">

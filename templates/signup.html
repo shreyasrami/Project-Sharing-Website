@@ -29,7 +29,7 @@
   </button>
 
   <div class="collapse navbar-collapse collapsediv" id="navbarSupportedContent">
-  <ul class="navbar-nav ml-auto ">
+  <ul class="navbar-nav ml-auto navitems">
 
     <li class="nav-item">
       <a class="nav-link meet" href="{% url 'about' %}">ABOUT</a>
@@ -38,10 +38,10 @@
       <a class="nav-link meet" href="{% url 'team' %}">TEAM</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'login' %}"><button class="btn btn-light btn-outline-primary">LogIn</button></a>
+      <a class="nav-link" href="{% url 'login' %}"><button class="btn btn-primary">LogIn</button></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'signup' %}"><button class="btn btn-light btn-outline-success">SignUp</button></a>
+      <a class="nav-link" href="{% url 'signup' %}"><button class="btn btn-success">SignUp</button></a>
 
     </li>
 
@@ -64,7 +64,7 @@
   <div class="row" data-aos="fade-up">
 
     <div class="col-lg-6 col-md-12 col-sm-12 margin">
-        <img class="image" src="{% static 'images\illustration-woman-online-desktop.svg' %}" alt="img">
+        <img class="image" src="{% static 'images\support_solid.svg' %}" alt="img">
     </div>
     <div class="col-lg-6 col-md-12 col-sm-12">
       <div class="card logincard" style="width: 18rem;">
@@ -78,12 +78,12 @@
 
   <div class="form-group">
     <label for="fullname" class="form-text">Full Name</label>
-    <input type="text" class="form-control" id="fullname" name="Full_Name" placeholder="First Name">
+    <input type="text" class="form-control" id="fullname" name="Full_Name" placeholder="Full Name">
   </div>
 
   <div class="form-group">
     <label for="username" class="form-text">Username</label>
-    <input type="text" class="form-control" id="username" name="Username" placeholder="Last Name">
+    <input type="text" class="form-control" id="username" name="Username" placeholder="Username">
   </div>
 
   <label for="exampleInputEmail" class="form-text">Email address</label>
@@ -95,8 +95,8 @@
   <input type="password" class="form-control" id="exampleInputPassword1" name="Password1" placeholder="Password">
 </div>
 <div class="form-group">
-  <label for="exampleInputPassword2" class="form-text">Password</label>
-  <input type="password" class="form-control" id="exampleInputPassword2" name="Password2" placeholder="Password">
+  <label for="exampleInputPassword2" class="form-text">Confirm Password</label>
+  <input type="password" class="form-control" id="exampleInputPassword2" name="Password2" placeholder="Confirm Password">
 </div>
 
 <button type="submit" class="btn btn-primary">SignUp</button>

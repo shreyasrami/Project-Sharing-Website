@@ -27,7 +27,7 @@
 </button>
 
 <div class="collapse navbar-collapse collapsediv" id="navbarSupportedContent">
-  <ul class="navbar-nav ml-auto ">
+  <ul class="navbar-nav ml-auto navitems">
     <!-- <li class="nav-item active">
       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
     </li> -->
@@ -54,10 +54,10 @@
         <a class="nav-link meet" href="{% url 'team' %}">TEAM</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'login' %}"><button class="btn btn-light btn-outline-primary">Login</button></a>
+        <a class="nav-link" href="{% url 'login' %}"><button class="btn btn-primary">Login</button></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'signup' %}"><button class="btn btn-light btn-outline-success">Signup</button></a>
+        <a class="nav-link" href="{% url 'signup' %}"><button class="btn btn-success">Signup</button></a>
 
         </li>
 
@@ -75,7 +75,7 @@
                 <b>  <p class="bigfont">Let's</p> <p class="bigfont">Get Started!</p></b>
                 <br>
                 <h5>Share your experiences of your best moments</h5>  <h5>with the world</h5> <br>
-                <button type="button" name="button" class="btn btn-lg btn-outline-success btn-light signupbtn">SignUp</button>
+                <button type="button" name="button" class="btn btn-lg btn-success signupbtn">SignUp</button>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <img src="{% static 'images\illustration-woman-online-desktop.svg' %}" alt="img" class="imgdiv1">
@@ -115,7 +115,7 @@
         </div>
         <div class="col-lg-6 col-md-12 col-sm-12">
 
-          <b>  <p class="bigfont">Grow</p> <p class="bigfont thodaupar">your Business</p></b>
+          <b>  <p class="bigfont">Grow</p> <p class="bigfont thodaupar">your <p class="bigfont">Business</p></p></b>
           <br>
           <h5>Get in a community and meet new customers</h5> <h5>and expand your business</h5> <br>
         </div>
@@ -130,7 +130,7 @@
                   <!-- <button type="button" name="button" class="btn btn-lg btn-outline-success btn-light signupbtn">SignUp</button> -->
                   </div>
                   <div class="col-lg-6 col-md-12 col-sm-12">
-                      <img src="{% static 'images\graphs.svg' %}" alt="img" class="imgdiv1">
+                      <img src="{% static 'images\graphs.svg' %}" alt="img" class="">
                   </div>
        </div>
      </div>
